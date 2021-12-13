@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Mapty</title>
+</head>
+<body >
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="sidebar__heading">Mapty</h1>
+            <form action="" class="form form--hide">
+                <div class="form__row">
+                    <label for="" class="form__row__label">
+                      Type
+                    <select type='select' class="form__row__input form__type">
+                      <option value="Running">Running</option>
+                      <option value="Cycling">Cycling</option>
+                    </select>   
+                    </label>
+                    <label for="" class="form__row__label">
+                      Distance
+                      <input type="text" class="form__row__input form__distance" placeholder=km>
+                    </label>
+                    </div>
+                    <div class="form__row">
+                      <label for="" class="form__row__label">
+                        Duration
+                        <input type="text" class="form__row__input form__duration" placeholder=min>
+                      </label>
+                      <label for="" class="form__row__label form__row__label__cadence">
+                        Cadence
+                        <input type="text" class="form__row__input form__cadence" placeholder=steps/min>
+                      </label>
+                      <label for="" class="form__row__label form__row__label__elevation__gain hide">
+                        Elevation Gain
+                        <input type="text" class="form__row__input form__elevation_gain hide" placeholder=steps/min>
+                      </label>
+                </div>
+                <button type='submit' class="form__btn">OK</button>
+            </form>
+            
+        </div>
+        <div id='map'></div> 
+    </div>   
+    <script defer src="app.js"></script>
+</body>
+</html>

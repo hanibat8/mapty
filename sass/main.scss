@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body{
+  font-size: 95%;
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  text-align: justify;
+  line-height: 1.6;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+#map{ 
+    height: 500px;
+    @media(min-width:1200px){
+        flex-basis: 70%;
+        height: 100vh;
+        flex-grow: 0;
+    }
+} 
+
+.container{
+    margin: 2rem;
+    width: 95%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+
+    @media(min-width:1200px){
+        flex-direction: row;
+    }
+}
+
+.sidebar{
+    background-color: rgba(0, 0, 0, 0.687);
+    color: #fff;
+    padding: 2rem 1rem;
+    flex-basis: 100%;
+    font-size: 1.4rem;
+
+    @media(min-width:1200px){
+        max-width: 500px;
+        min-width: 500px;
+    }
+
+    &__heading{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.form{
+    background-color: rgba(66, 66, 66, 0.612);
+    border-radius: .5rem;
+    padding: 2rem 1rem;
+    box-shadow: 4px -2px 13px -29px rgba(132,132,132,0.56);
+    opacity: 1;
+    font-style: inherit;
+    height: 9.25rem;
+    transition: all .4s;
+
+    &--hide{   
+        height: 0;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+    }
+    
+    &__row{
+        display: grid;
+        grid-template-columns: minmax(8%,1fr) minmax(20%,1fr);
+        grid-gap: 1rem;
+        margin-bottom: 1rem;
+        transition: all 1s ;
+
+        &__label{
+            display: grid;
+            grid-template-columns: minmax(10%,1fr) minmax(20%,1fr);
+        }
+
+        &__input{
+            background-color: rgb(224, 224, 224);
+            border: none;
+            border-radius: .5rem;
+            padding:0 .5rem;
+            transition: all 1ms ;
+
+            &::placeholder{
+                padding:0 .5rem;
+            }
+        }
+    }
+
+    &__btn{
+        display: none;
+    }
+}
+
+.workout{
+    background-color: rgba(66, 66, 66, 0.612);
+    border-radius: .5rem;
+    padding: 2rem 1rem;
+    box-shadow: 4px -2px 13px -29px rgba(132,132,132,0.56);
+    margin-top: 1rem;
+
+    &__entry{
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    &__icon{
+        width: 2rem;
+        height: 2rem;
+    }
+    &__details{
+        display: flex;
+
+        &__item{
+            margin-right: 1rem;
+        }
+    }
+
+    &--running{
+        border-left: 5px solid rgb(0, 164, 38);
+    }
+
+    &--cycling{
+        border-left: 5px solid rgb(211, 156, 37);
+    }
+
+    /*&:first-of-type{
+        margin-top: -3rem;
+    }*/
+}
+
+.hide{
+    display: none;
+}
